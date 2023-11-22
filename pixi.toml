@@ -12,7 +12,7 @@ scripts = ["scripts/env_setup.sh"]
 [tasks]
 base = { cmd = "env && bash -ex scripts/base.sh" }
 all = { cmd = "pwd", depends_on = [
-            "test"
+            "base"
         ]}
 
 [dependencies]
