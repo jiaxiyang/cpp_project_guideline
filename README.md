@@ -1,13 +1,13 @@
 ## project layout
 
 1. 两种方式, 主要区别是 include 和 test 是不是和模块 src 在一个文件夹
-   - 一起：[参考 opencv](https://github.com/opencv/opencv)
-   - 分离：[参考 grpc](https://github.com/grpc/grpc)
+1. 🔲 一起：[参考 opencv](https://github.com/opencv/opencv)
+1. 🔲 分离：[参考 grpc](https://github.com/grpc/grpc)
 
 ## package management
 
 1. ✅ [pixi](https://github.com/prefix-dev/pixi)
-1. ✅ cfonts 使得 task 更清楚
+1. ✅ cfonts 使得 task log 更清楚
 
 ## commit guidelines
 
@@ -19,45 +19,45 @@
 
 ## format
 
-1. 检查代码是否符合 google 编码规范
-1. [cpplint](https://github.com/cpplint/cpplint)
+1. 🔲 检查代码是否符合 google 编码规范
+1. 🔲 [cpplint](https://github.com/cpplint/cpplint)
 
 ## SCA(Static Code Analysis)
 
-1. [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+1. 🔲 [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
 
 ## DCA(Dynamic Code Analysis)
 
-1. asan
+1. 🔲 asan
    - memcheck
    - thread
-1. valgrind
+1. 🔲 valgrind
 
 ## unit test
 
-1. gtest
+1. 🔲 gtest
 
 ## coverage test
 
-1. [gcovr](https://github.com/gcovr/gcovr)
+1. 🔲 [gcovr](https://github.com/gcovr/gcovr)
 1. 尽量每一行代码都有测试
 
 ## CI/CD
 
-1. 多平台
-1. release 到 github
-1. 编译选项`-Wall -Wextra -Werror`
-1. 结果标准显示
+1. 🔲 多平台
+1. 🔲 release 到 github
+1. 🔲 编译选项`-Wall -Wextra -Werror`
+1. 🔲 结果标准显示
 
 ## profiling
 
-1. perf 指标
-1. [火焰图](https://github.com/brendangregg/FlameGraph)
-1. [gprof2dot](https://github.com/jrfonseca/gprof2dot)
+1. 🔲 perf 指标
+1. 🔲 [火焰图](https://github.com/brendangregg/FlameGraph)
+1. 🔲 [gprof2dot](https://github.com/jrfonseca/gprof2dot)
 
 ## doc
 
-1. [doxygen](https://www.doxygen.nl/)
+1. 🔲 [doxygen](https://www.doxygen.nl/)
 1. html 比 pdf 更容易阅读
 
 ## changelog
@@ -73,5 +73,5 @@
 
 ## TODO
 
-1. 画流程图
-1. project layout 截图
+1. 🔲 画流程图
+1. 🔲 project layout 截图
