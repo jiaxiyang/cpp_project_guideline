@@ -6,8 +6,8 @@
 
 ## package management
 
-1. [pixi](https://github.com/prefix-dev/pixi)
-1. cfonts 使得 task 更清楚
+1. - [x] [pixi](https://github.com/prefix-dev/pixi)
+1. - [x] cfonts 使得 task 更清楚
 
 ## commit guidelines
 
