@@ -10,8 +10,10 @@ platforms = ["linux-64"]
 scripts = ["scripts/env_setup.sh"]
 
 [tasks]
-base = { cmd = "env && bash -ex scripts/base.sh" }
+install = { cmd = "npm i cfonts -g && cfonts 'install'" }
+base = { cmd = "cfonts 'run examples' && bash -ex scripts/base.sh" }
 all = { cmd = "pwd", depends_on = [
+            "install",
             "base"
         ]}
 
@@ -26,3 +28,4 @@ gxx = "13.2.0.*"
 clang = "17.0.4.*"
 clangxx = "17.0.4.*"
 clang-format = "17.0.4.*"
+nodejs = "20.9.0.*"

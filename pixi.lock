@@ -1388,28 +1388,6 @@ package:
   size: 133162
   timestamp: 1690549855318
 - platform: linux-64
-  name: libclang-cpp
-  version: 17.0.4
-  category: main
-  manager: conda
-  dependencies:
-  - libclang-cpp17 17.0.4 default_h1cdf331_1
-  - libgcc-ng >=12
-  - libllvm17 >=17.0.4,<17.1.0a0
-  - libstdcxx-ng >=12
-  url: https://conda.anaconda.org/conda-forge/linux-64/libclang-cpp-17.0.4-default_h1cdf331_1.conda
-  hash:
-    md5: 132ebffd796cd6467a41f84c72127937
-    sha256: 80b9c98b8b906fed007ac6a7bd5c46246848f95fdb1ffaa535da7361e2601854
-  build: default_h1cdf331_1
-  arch: x86_64
-  subdir: linux-64
-  build_number: 1
-  license: Apache-2.0 WITH LLVM-exception
-  license_family: Apache
-  size: 21453
-  timestamp: 1699854739988
-- platform: linux-64
   name: libclang-cpp17
   version: 17.0.4
   category: main
@@ -3057,6 +3035,32 @@ package:
   license_family: Apache
   size: 2251263
   timestamp: 1676837602636
+- platform: linux-64
+  name: nodejs
+  version: 20.9.0
+  category: main
+  manager: conda
+  dependencies:
+  - __glibc >=2.17,<3.0.a0
+  - icu >=73.2,<74.0a0
+  - libgcc-ng >=12
+  - libstdcxx-ng >=12
+  - libuv >=1.46.0,<1.47.0a0
+  - libzlib >=1.2.13,<1.3.0a0
+  - openssl >=3.1.4,<4.0a0
+  - zlib
+  url: https://conda.anaconda.org/conda-forge/linux-64/nodejs-20.9.0-hb753e55_0.conda
+  hash:
+    md5: ddfcb003b0a6804fabe7dfbf1be16651
+    sha256: 4d35f8151f83bc561e4bcb41b46dcf77ec708c88eb333d1376f37371288f46ad
+  build: hb753e55_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: MIT
+  license_family: MIT
+  size: 17141416
+  timestamp: 1700390394425
 - platform: linux-64
   name: nspr
   version: '4.35'
