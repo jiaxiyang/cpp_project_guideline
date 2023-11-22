@@ -10,6 +10,7 @@ jobs:
     - uses: prefix-dev/setup-pixi@v0.3.0
     - name: run
       run: pixi run all
+    - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
