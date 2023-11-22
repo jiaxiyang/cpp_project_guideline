@@ -1,0 +1,16 @@
+build
+.clangd
+core.*
+.pixi
+compile_commands.json
+.cache
+*.png
+*.svg
+perf.data*
+*.html
+*.gif
+*.csv
+test
+install
+*.pdf
+__pycache__

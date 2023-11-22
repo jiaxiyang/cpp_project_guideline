@@ -1,0 +1,28 @@
+[project]
+name = "cpp_project_guideline"
+version = "0.1.0"
+description = "C++ project guidelines"
+authors = ["jiaxiyang <jiaxiyangbit@126.com>"]
+channels = ["conda-forge", "bioconda", "nvidia", "pytorch"]
+platforms = ["linux-64"]
+
+[activation]
+scripts = ["scripts/env_setup.sh"]
+
+[tasks]
+base = { cmd = "env && bash -ex scripts/base.sh" }
+all = { cmd = "pwd", depends_on = [
+            "test"
+        ]}
+
+[dependencies]
+cmake = "3.27.6.*"
+opencv = "4.8.1.*"
+glog = "0.6.0.*"
+ninja = "1.11.1.*"
+eigen = "3.4.0.*"
+gcc = "13.2.0.*"
+gxx = "13.2.0.*"
+clang = "17.0.4.*"
+clangxx = "17.0.4.*"
+clang-format = "17.0.4.*"
