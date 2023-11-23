@@ -1,11 +1,12 @@
+// Copyright (c) xiyang.jia
+// Licensed under the MIT license.
 #include <glog/logging.h>
 
 #include <algorithm>
-#include <chrono>
+#include <chrono> // NOLINT [build/c++11]
 #include <iostream>
 #include <vector>
 
-using namespace std;
 using Clock = std::chrono::steady_clock;
 
 #define __TIC__(tag) auto __##tag##_start_time = Clock::now();

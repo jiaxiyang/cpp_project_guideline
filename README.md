@@ -19,8 +19,8 @@
 
 ## format
 
-1. 🔲 检查代码是否符合 google 编码规范
-1. 🔲 [cpplint](https://github.com/cpplint/cpplint)
+1. ✅ [run-clang-format](https://github.com/Sarcasm/run-clang-format/tree/master)
+1. 🔲 [actions/clang-format-check](https://github.com/marketplace/actions/clang-format-check)
 
 ## SCA(Static Code Analysis)
 
@@ -44,6 +44,7 @@
 
 ## CI/CD
 
+1. 🔲 检查代码是否符合 google 编码规范 [cpplint](https://github.com/cpplint/cpplint)
 1. 🔲 多平台
 1. 🔲 release 到 github
 1. 🔲 编译选项`-Wall -Wextra -Werror`
@@ -75,3 +76,4 @@
 
 1. 🔲 画流程图
 1. 🔲 project layout 截图
+1. 🔲 每一步贴示意图

@@ -373,6 +373,26 @@ package:
   size: 18494905
   timestamp: 1695269729661
 - platform: linux-64
+  name: cpplint
+  version: 1.6.0
+  category: main
+  manager: conda
+  dependencies:
+  - python ==2.7.*|>=3.6
+  url: https://conda.anaconda.org/conda-forge/noarch/cpplint-1.6.0-pyhd8ed1ab_0.tar.bz2
+  hash:
+    md5: 0f8b9eea32364cb4269be8664280cc03
+    sha256: 6ead49bc261be766b6858bac0695b4e53ee555a31938963dd136b941b928b94c
+  build: pyhd8ed1ab_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: BSD-3-Clause
+  license_family: BSD
+  noarch: python
+  size: 68660
+  timestamp: 1645443056252
+- platform: linux-64
   name: dav1d
   version: 1.2.1
   category: main
@@ -2121,20 +2141,20 @@ package:
   - libtiff >=4.6.0,<4.7.0a0
   - libwebp-base >=1.3.2,<2.0a0
   - libzlib >=1.2.13,<1.3.0a0
-  - numpy >=1.26.0,<2.0a0
+  - numpy >=1.23.5,<2.0a0
   - qt-main >=5.15.8,<5.16.0a0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libopencv-4.8.1-py312hed1d938_5.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libopencv-4.8.1-py311h1c4e2e0_5.conda
   hash:
-    md5: e1ed733f8ba9723feadf6dfae3f6913f
-    sha256: 011de931bbcb42e05419c05e5abc4dfb806fc912b368b8fa0e5ab0ca22714ce0
-  build: py312hed1d938_5
+    md5: d52fb5df922f84e1d5e2dc160ebda961
+    sha256: 51b9b76415db1550c0bf59feba21de4f2915dbec4fb87a6a54c1b842a7bae58c
+  build: py311h1c4e2e0_5
   arch: x86_64
   subdir: linux-64
   build_number: 5
   license: Apache-2.0
   license_family: Apache
-  size: 30277554
-  timestamp: 1698893305291
+  size: 30232973
+  timestamp: 1698893311583
 - platform: linux-64
   name: libopenvino
   version: 2023.1.0
@@ -3116,13 +3136,13 @@ package:
   - libgcc-ng >=12
   - liblapack >=3.9.0,<4.0a0
   - libstdcxx-ng >=12
-  - python >=3.12.0rc3,<3.13.0a0
-  - python_abi 3.12.* *_cp312
-  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.0-py312heda63a1_0.conda
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.0-py311h64a7726_0.conda
   hash:
-    md5: 9b4f35e4d83e2a8b17868b65beb438d9
-    sha256: 83c8770959c096639973dd91dae7001adf8ec4cea374c125388c22314e92cf3a
-  build: py312heda63a1_0
+    md5: bf16a9f625126e378302f08e7ed67517
+    sha256: 0aab5cef67cc2a1cd584f6e9cc6f2065c7a28c142d7defcb8096e8f719d9b3bf
+  build: py311h64a7726_0
   arch: x86_64
   subdir: linux-64
   build_number: 0
@@ -3130,8 +3150,8 @@ package:
   - numpy-base <0a0
   license: BSD-3-Clause
   license_family: BSD
-  size: 7452952
-  timestamp: 1695291296202
+  size: 8039946
+  timestamp: 1694920380273
 - platform: linux-64
   name: ocl-icd
   version: 2.3.1
@@ -3176,22 +3196,22 @@ package:
   category: main
   manager: conda
   dependencies:
-  - libopencv 4.8.1 py312hed1d938_5
+  - libopencv 4.8.1 py311h1c4e2e0_5
   - libprotobuf >=4.24.4,<4.24.5.0a0
-  - py-opencv 4.8.1 py312h0af958d_5
-  - python_abi 3.12.* *_cp312
-  url: https://conda.anaconda.org/conda-forge/linux-64/opencv-4.8.1-py312h74ac831_5.conda
+  - py-opencv 4.8.1 py311hbeafb31_5
+  - python_abi 3.11.* *_cp311
+  url: https://conda.anaconda.org/conda-forge/linux-64/opencv-4.8.1-py311hf4f9f61_5.conda
   hash:
-    md5: b9fb5b2072925c9fa80be9f38b691d81
-    sha256: e8008a495ec9e1c801a43ae37469da8f0ad3255f4df353bff45ec6b1d0217b15
-  build: py312h74ac831_5
+    md5: b7204c4f6a899952109cef358dd072b5
+    sha256: 22aed542d7908cf483018062034b72c9166225b3868aaf0ee55c689cb23ac5ce
+  build: py311hf4f9f61_5
   arch: x86_64
   subdir: linux-64
   build_number: 5
   license: Apache-2.0
   license_family: Apache
-  size: 25912
-  timestamp: 1698893401604
+  size: 25767
+  timestamp: 1698893408307
 - platform: linux-64
   name: openh264
   version: 2.3.1
@@ -3366,77 +3386,76 @@ package:
   category: main
   manager: conda
   dependencies:
-  - libopencv 4.8.1 py312hed1d938_5
+  - libopencv 4.8.1 py311h1c4e2e0_5
   - libprotobuf >=4.24.4,<4.24.5.0a0
-  - numpy >=1.26.0,<2.0a0
-  - python >=3.12,<3.13.0a0
-  - python_abi 3.12.* *_cp312
-  url: https://conda.anaconda.org/conda-forge/linux-64/py-opencv-4.8.1-py312h0af958d_5.conda
+  - numpy >=1.23.5,<2.0a0
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  url: https://conda.anaconda.org/conda-forge/linux-64/py-opencv-4.8.1-py311hbeafb31_5.conda
   hash:
-    md5: 0ab57c9c44d643f23d101a9c6efc265d
-    sha256: a611c2ab19b8d83e65b2ac6ad7a7f54a2eb3436d94580504509550ded92ac506
-  build: py312h0af958d_5
+    md5: 6dbc39723f53cfae15fe63293f767e90
+    sha256: d479da57cc8f10676c890b0c126add7269b2f266b54c612d5875abffe63f118d
+  build: py311hbeafb31_5
   arch: x86_64
   subdir: linux-64
   build_number: 5
   license: Apache-2.0
   license_family: Apache
-  size: 1152537
-  timestamp: 1698893387752
+  size: 1152246
+  timestamp: 1698893394378
 - platform: linux-64
   name: python
-  version: 3.12.0
+  version: 3.11.0
   category: main
   manager: conda
   dependencies:
   - bzip2 >=1.0.8,<2.0a0
   - ld_impl_linux-64 >=2.36.1
-  - libexpat >=2.5.0,<3.0a0
   - libffi >=3.4,<4.0a0
   - libgcc-ng >=12
   - libnsl >=2.0.0,<2.1.0a0
-  - libsqlite >=3.43.0,<4.0a0
-  - libuuid >=2.38.1,<3.0a0
+  - libsqlite >=3.40.0,<4.0a0
+  - libuuid >=2.32.1,<3.0a0
   - libzlib >=1.2.13,<1.3.0a0
-  - ncurses >=6.4,<7.0a0
-  - openssl >=3.1.3,<4.0a0
-  - readline >=8.2,<9.0a0
-  - tk >=8.6.13,<8.7.0a0
+  - ncurses >=6.3,<7.0a0
+  - openssl >=3.0.7,<4.0a0
+  - readline >=8.1.2,<9.0a0
+  - tk >=8.6.12,<8.7.0a0
   - tzdata
   - xz >=5.2.6,<6.0a0
-  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.0-hab00c5b_0_cpython.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.11.0-he550d4f_1_cpython.conda
   hash:
-    md5: 7f97faab5bebcc2580f4f299285323da
-    sha256: 5398ebae6a1ccbfd3f76361eac75f3ac071527a8072627c4bf9008c689034f48
-  build: hab00c5b_0_cpython
+    md5: 8d14fc2aa12db370a443753c8230be1e
+    sha256: 464f998e406b645ba34771bb53a0a7c2734e855ee78dd021aa4dedfdb65659b7
+  build: he550d4f_1_cpython
   arch: x86_64
   subdir: linux-64
-  build_number: 0
+  build_number: 1
   constrains:
-  - python_abi 3.12.* *_cp312
+  - python_abi 3.11.* *_cp311
   license: Python-2.0
-  size: 32123473
-  timestamp: 1696324522323
+  size: 31476523
+  timestamp: 1673700777998
 - platform: linux-64
   name: python_abi
-  version: '3.12'
+  version: '3.11'
   category: main
   manager: conda
   dependencies: []
-  url: https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.12-4_cp312.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.11-4_cp311.conda
   hash:
-    md5: dccc2d142812964fcc6abdc97b672dff
-    sha256: 182a329de10a4165f6e8a3804caf751f918f6ea6176dd4e5abcdae1ed3095bf6
-  build: 4_cp312
+    md5: d786502c97404c94d7d58d258a445a65
+    sha256: 0be3ac1bf852d64f553220c7e6457e9c047dfb7412da9d22fbaa67e60858b3cf
+  build: 4_cp311
   arch: x86_64
   subdir: linux-64
   build_number: 4
   constrains:
-  - python 3.12.* *_cpython
+  - python 3.11.* *_cpython
   license: BSD-3-Clause
   license_family: BSD
   size: 6385
-  timestamp: 1695147396604
+  timestamp: 1695147338551
 - platform: linux-64
   name: qt-main
   version: 5.15.8

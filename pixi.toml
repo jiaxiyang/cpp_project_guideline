@@ -11,10 +11,14 @@ scripts = ["scripts/env_setup.sh"]
 
 [tasks]
 install = { cmd = "npm i cfonts -g && cfonts 'install'" }
+format_check = { cmd = "cfonts 'format' && ./scripts/run-clang-format.py -r samples" }
+cpplint = { cmd = "cfonts 'cpplint' && cpplint samples/*" }
 base = { cmd = "cfonts 'examples' && bash -ex scripts/base.sh" }
 all = { cmd = "pwd", depends_on = [
             "install",
-            "base"
+            "format_check",
+            "cpplint",
+            "base",
         ]}
 
 [dependencies]
@@ -29,3 +33,5 @@ clang = "17.0.4.*"
 clangxx = "17.0.4.*"
 clang-format = "17.0.4.*"
 nodejs = "20.9.0.*"
+cpplint = "1.6.0.*"
+python = ">3.9,<=3.11"
