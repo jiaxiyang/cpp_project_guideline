@@ -34,7 +34,7 @@
 
 ## coverage test
 
-1. 🔲 [gcovr](https://github.com/gcovr/gcovr)
+1. ✅ [gcovr](https://github.com/gcovr/gcovr)
 1. 尽量每一行代码都有测试
 
 ## CI/CD
