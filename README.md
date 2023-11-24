@@ -17,14 +17,9 @@
 
 1. [first-contributions](https://github.com/firstcontributions/first-contributions)
 
-## format
-
-1. ✅ [run-clang-format](https://github.com/Sarcasm/run-clang-format/tree/master)
-1. 🔲 [actions/clang-format-check](https://github.com/marketplace/actions/clang-format-check)
-
 ## SCA(Static Code Analysis)
 
-1. 🔲 [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+1. ✅ [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
 
 ## DCA(Dynamic Code Analysis)
 
@@ -44,6 +39,8 @@
 
 ## CI/CD
 
+1. ✅ [run-clang-format](https://github.com/Sarcasm/run-clang-format/tree/master)
+1. 🔲 [actions/clang-format-check](https://github.com/marketplace/actions/clang-format-check)
 1. 🔲 检查代码是否符合 google 编码规范 [cpplint](https://github.com/cpplint/cpplint)
 1. 🔲 多平台
 1. 🔲 release 到 github
