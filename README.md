@@ -64,6 +64,7 @@
 1. [tensorrt release notes](https://docs.nvidia.com/deeplearning/tensorrt/release-notes/index.html)
 1. [rerun](https://github.com/rerun-io/rerun/releases)
 1. [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/en/changelog.md)
+1. [glog](https://github.com/google/glog/blob/master/ChangeLog)
 
 ## reference
 

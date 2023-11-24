@@ -14,7 +14,7 @@ install = { cmd = "npm i cfonts -g && cfonts 'install'" }
 format_check = { cmd = "cfonts 'format' && ./scripts/run-clang-format.py -r samples" }
 cpplint = { cmd = "cfonts 'cpplint' && cpplint samples/*" }
 base = { cmd = "cfonts 'examples' && bash -ex scripts/base.sh" }
-gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-fprofile-arcs -ftest-coverage -g -O0\" && gcovr --decisions --txt && mkdir -p gcovr && gcovr --html-details gcovr/coverage.html" }
+gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && mkdir -p gcovr && gcovr ." }
 clang-tidy = { cmd = "cfonts 'tidy' && run-clang-tidy -p build/ -quiet -use-color", depends_on = [ "base" ] } # after build
 all = { cmd = "pwd", depends_on = [
             "install",
