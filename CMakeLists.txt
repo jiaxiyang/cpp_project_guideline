@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project(base)
+project(cpp_project_guideline)
 
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 if(${CMAKE_BUILD_TYPE} MATCHES Debug)
@@ -13,14 +13,8 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   add_compile_options(-fcolor-diagnostics)
 endif()
 
-add_executable(base)
+add_library(add SHARED)
+target_include_directories(add PUBLIC include/)
+target_sources(add PRIVATE src/add.cpp)
 
-# source
-target_sources(base PRIVATE samples/base.cpp)
-
-# compile
-target_compile_options(base PRIVATE -O3 -std=c++17)
-
-# link
-find_package(glog REQUIRED)
-target_link_libraries(base glog::glog)
+add_subdirectory(samples)

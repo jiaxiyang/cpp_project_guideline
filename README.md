@@ -2,7 +2,7 @@
 
 1. 两种方式, 主要区别是 include 和 test 是不是和模块 src 在一个文件夹
 1. 🔲 一起：[参考 opencv](https://github.com/opencv/opencv)
-1. 🔲 分离：[参考 grpc](https://github.com/grpc/grpc)
+1. ✅ 分离：[参考 grpc](https://github.com/grpc/grpc)
 
 ## package management
 
@@ -49,9 +49,9 @@
 
 ## profiling
 
-1. 🔲 perf 指标
-1. 🔲 [火焰图](https://github.com/brendangregg/FlameGraph)
-1. 🔲 [gprof2dot](https://github.com/jrfonseca/gprof2dot)
+1. ✅ perf 指标
+1. ✅ [火焰图](https://github.com/brendangregg/FlameGraph)
+1. ✅ [gprof2dot](https://github.com/jrfonseca/gprof2dot)
 
 ## doc
 

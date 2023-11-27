@@ -1,12 +1,13 @@
 // Copyright (c) xiyang.jia
 // Licensed under the MIT license.
-
 #include <glog/logging.h>
 #include <unistd.h>
 
 #include <chrono>  // NOLINT [build/c++11]
 #include <iostream>
 #include <random>
+
+#include "./add.hpp"
 
 using Clock = std::chrono::steady_clock;
 
@@ -20,15 +21,7 @@ using Clock = std::chrono::steady_clock;
                    .count()                                           \
             << "us";
 
-float add(float i, float j) {
-  // std::cout << "i: " << i << std::endl;
-  // std::cout << "j: " << j << std::endl;
-  // sleep(1);
-
-  return i + j;
-}
-
-static float generate_random_float(float min, float max) {
+static float generateRandomFloat(float min, float max) {
   std::random_device rd;
   std::mt19937 gen(rd());
   std::uniform_real_distribution<> dist(min, max);
@@ -41,14 +34,14 @@ int main() {
   int sum = 0;
 
   for (auto i = 1u; i < 100000; ++i) {
-    sum += add(generate_random_float(1000.0, 10000.0),
-               generate_random_float(1000.0, 10000.0));
+    sum += add(generateRandomFloat(1000.0, 10000.0),
+               generateRandomFloat(1000.0, 10000.0));
     // std::cout << j << std::endl;
   }
   std::cout << sum << std::endl;
 
-  // __TIC__(SLEEP)
-  // sleep(1);
-  // __TOC__(SLEEP)
+  __TIC__(SLEEP)
+  sleep(1);
+  __TOC__(SLEEP)
   return 0;
 }
