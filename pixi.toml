@@ -15,6 +15,7 @@ format_check = { cmd = "cfonts 'format' && ./scripts/run-clang-format.py -r samp
 cpplint = { cmd = "cfonts 'cpplint' && cpplint samples/*" }
 base = { cmd = "cfonts 'examples' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-g -Wall -Wextra -Werror\"" }
 perf = { cmd = "cfonts 'perf' && bash -ex ./scripts/perf_flamegraph.sh ./build/samples/base", depends_on = [ "base" ] }
+valgrind = { cmd = "cfonts 'valgrind' && valgrind --leak-check=full ./build/samples/base", depends_on = [ "base" ] }
 gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && mkdir -p gcovr && gcovr ." }
 clang-tidy = { cmd = "cfonts 'tidy' && run-clang-tidy -p build/ -quiet -use-color", depends_on = [ "base" ] } # after build
 all = { cmd = "pwd", depends_on = [
@@ -23,6 +24,7 @@ all = { cmd = "pwd", depends_on = [
             "cpplint",
             "base",
             "clang-tidy",
+            "valgrind",
             "gcovr"
         ]}
 
