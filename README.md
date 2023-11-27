@@ -23,10 +23,10 @@
 
 ## DCA(Dynamic Code Analysis)
 
-1. 🔲 asan
+1. ✅ asan
    - memcheck
    - thread
-1. 🔲 valgrind
+1. ✅ valgrind
 
 ## unit test
 
@@ -44,7 +44,7 @@
 1. 🔲 检查代码是否符合 google 编码规范 [cpplint](https://github.com/cpplint/cpplint)
 1. 🔲 多平台
 1. 🔲 release 到 github
-1. 🔲 编译选项`-Wall -Wextra -Werror`
+1. ✅ 编译选项`-Wall -Wextra -Werror`
 1. 🔲 结果标准显示
 
 ## profiling

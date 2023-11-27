@@ -1,11 +1,13 @@
 // Copyright (c) xiyang.jia
 // Licensed under the MIT license.
 #include <glog/logging.h>
+#include <pthread.h>
 #include <unistd.h>
 
 #include <chrono>  // NOLINT [build/c++11]
 #include <iostream>
 #include <random>
+#include <thread>  // NOLINT [build/c++11]
 
 #include "./add.hpp"
 
@@ -21,6 +23,20 @@ using Clock = std::chrono::steady_clock;
                    .count()                                           \
             << "us";
 
+int Global;
+void *thread1(void *x) {
+  Global = 42;
+  return x;
+}
+
+int threadTest() {
+  pthread_t t;
+  pthread_create(&t, nullptr, thread1, nullptr);
+  Global = 43;
+  pthread_join(t, nullptr);
+  return Global;
+}
+
 static float generateRandomFloat(float min, float max) {
   std::random_device rd;
   std::mt19937 gen(rd());
@@ -30,6 +46,9 @@ static float generateRandomFloat(float min, float max) {
 
 int main() {
   int a = 1;
+  // int *b = new int();  // for memory check
+  // *b = 1;
+
   std::cout << "a:" << a << std::endl;
   int sum = 0;
 
@@ -43,5 +62,8 @@ int main() {
   __TIC__(SLEEP)
   sleep(1);
   __TOC__(SLEEP)
+
+  // threadTest();  // for data race check
+
   return 0;
 }
