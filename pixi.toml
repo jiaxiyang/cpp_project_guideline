@@ -21,6 +21,7 @@ asan-thread = { cmd = "cfonts 'asan thread' && bash -ex scripts/base.sh -DCMAKE_
 valgrind = { cmd = "cfonts 'valgrind' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-g\" && valgrind --leak-check=full ./build/samples/base" }
 gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && ctest -VV --test-dir build && mkdir -p gcovr && gcovr --gcov-ignore-parse-errors && gcovr --gcov-ignore-parse-errors --xml -o gcovr/coverage.xml" }
 clang-tidy = { cmd = "cfonts 'tidy' && run-clang-tidy -p build/ -quiet -use-color", depends_on = [ "base" ] } # after build
+doxygen = { cmd = "cfonts 'doxygen' && doxygen doc/Doxyfile.in " }
 all = { cmd = "pwd", depends_on = [
             "install",
             "format_check",
@@ -32,7 +33,8 @@ all = { cmd = "pwd", depends_on = [
             "asan-mem",
             "asan-thread",
             "valgrind",
-            "gcovr"
+            "gcovr",
+            "doxygen"
         ]}
 
 [dependencies]
@@ -54,3 +56,4 @@ gprof2dot = "2019.11.30.*"
 linux-perf = "6.3.10.*"
 valgrind = "3.22.0.*"
 gtest = "1.14.0.*"
+doxygen = "1.9.8.*"

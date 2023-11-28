@@ -351,6 +351,27 @@ package:
   size: 68660
   timestamp: 1645443056252
 - platform: linux-64
+  name: doxygen
+  version: 1.9.8
+  category: main
+  manager: conda
+  dependencies:
+  - libgcc-ng >=12
+  - libiconv >=1.17,<2.0a0
+  - libstdcxx-ng >=12
+  url: https://conda.anaconda.org/conda-forge/linux-64/doxygen-1.9.8-h661eb56_0.conda
+  hash:
+    md5: c750eb61744de0e40655fecbe1ceb70d
+    sha256: 720f662b14d4e851b39ba5c1e5c3553fcedb3c996c558dfecd737b1a6048aa85
+  build: h661eb56_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: GPL-2.0-only
+  license_family: GPL
+  size: 6548859
+  timestamp: 1694426200860
+- platform: linux-64
   name: eigen
   version: 3.4.0
   category: main
