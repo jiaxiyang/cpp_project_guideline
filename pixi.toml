@@ -26,7 +26,7 @@ all = { cmd = "pwd", depends_on = [
             "cpplint",
             "base",
             "clang-tidy",
-            "perf",
+            # "perf",
             "asan-mem",
             "asan-thread",
             "valgrind",
