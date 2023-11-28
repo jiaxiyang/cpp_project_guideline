@@ -13,6 +13,11 @@ jobs:
       # run: sudo  apt-get update && sudo apt-get install -y libc6-dbg linux-tools-generic && sudo rm /usr/bin/perf && sudo ln -s /usr/lib/linux-tools/5.15.0-89-generic/perf /usr/bin/perf
     - name: run
       run: pixi run all
+    - name: test report
+      uses: dorny/test-reporter@v1
+      with:
+        path: build/test/*.xml
+        reporter: jest-junit        # Format of test results
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
