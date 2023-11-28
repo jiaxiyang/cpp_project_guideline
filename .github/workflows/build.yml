@@ -1,6 +1,11 @@
 name: Ubuntu
 on: push
 
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
   project-test:
     name: project test
