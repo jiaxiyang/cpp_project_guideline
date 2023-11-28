@@ -20,7 +20,9 @@ jobs:
     - name: test report
       uses: dorny/test-reporter@v1
       with:
+        name: unit test
         paths: "build/test/*.xml"
+        reporter: jest-junit
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
