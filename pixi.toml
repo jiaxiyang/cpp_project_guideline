@@ -19,7 +19,7 @@ gtest = { cmd = "cfonts 'gtest' && ctest -VV --test-dir build", depends_on = [ "
 asan-mem = { cmd = "cfonts 'asan mem' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-fsanitize=address -g -lasan\" && ./build/samples/base" }
 asan-thread = { cmd = "cfonts 'asan thread' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-fsanitize=thread -g -static-libasan\" && ./build/samples/base" }
 valgrind = { cmd = "cfonts 'valgrind' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-g\" && valgrind --leak-check=full ./build/samples/base" }
-gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && ctest -VV --test-dir build && mkdir -p gcovr && gcovr --gcov-ignore-parse-errors && gcovr --gcov-ignore-parse-errors --xml -o gcovr/coverage.xml" }
+gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && ctest -VV --test-dir build && mkdir -p gcovr && gcovr --gcov-ignore-parse-errors" }
 clang-tidy = { cmd = "cfonts 'tidy' && run-clang-tidy -p build/ -quiet -use-color", depends_on = [ "base" ] } # after build
 doxygen = { cmd = "cfonts 'doxygen' && doxygen doc/Doxyfile.in " }
 all = { cmd = "pwd", depends_on = [
