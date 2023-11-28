@@ -34,5 +34,4 @@ jobs:
         name: my-artifact
         path: |
           gcovr
-          gcovr/coverage.xml
           build/test/report.xml
