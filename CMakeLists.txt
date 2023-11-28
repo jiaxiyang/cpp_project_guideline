@@ -17,4 +17,9 @@ add_library(add SHARED)
 target_include_directories(add PUBLIC include/)
 target_sources(add PRIVATE src/add.cpp)
 
+# samples
 add_subdirectory(samples)
+
+# unit test
+enable_testing()
+add_subdirectory(test)

@@ -18,4 +18,5 @@ cmake -G "${BUILD_SYSTEM}" -S . -B ${BUILD_DIR} \
 	"$@"
 
 cmake --build ${BUILD_DIR}
+# ctest -VV --test-dir ${BUILD_DIR}
 ./${BUILD_DIR}/samples/base

@@ -12,13 +12,14 @@ scripts = ["scripts/env_setup.sh"]
 [tasks]
 install = { cmd = "npm i cfonts -g && cfonts 'install'" }
 format_check = { cmd = "cfonts 'format' && ./scripts/run-clang-format.py -r samples" }
-cpplint = { cmd = "cfonts 'cpplint' && cpplint samples/*" }
+cpplint = { cmd = "cfonts 'cpplint' && cpplint include/* src/* samples/*" }
 base = { cmd = "cfonts 'examples' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-g -Wall -Wextra -Werror\"" }
 perf = { cmd = "cfonts 'perf' && bash -ex ./scripts/perf_flamegraph.sh ./build/samples/base", depends_on = [ "base" ] }
+gtest = { cmd = "cfonts 'gtest' && ctest -VV --test-dir build", depends_on = [ "base" ] }
 asan-mem = { cmd = "cfonts 'asan mem' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-fsanitize=address -g -lasan\" && ./build/samples/base" }
 asan-thread = { cmd = "cfonts 'asan thread' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-fsanitize=thread -g -static-libasan\" && ./build/samples/base" }
 valgrind = { cmd = "cfonts 'valgrind' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"-g\" && valgrind --leak-check=full ./build/samples/base" }
-gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && mkdir -p gcovr && gcovr ." }
+gcovr = { cmd = "cfonts 'gcovr' && bash -ex scripts/base.sh -DCMAKE_CXX_FLAGS=\"--coverage -g -O0\" && ctest -VV --test-dir build && mkdir -p gcovr && gcovr --gcov-ignore-parse-errors" }
 clang-tidy = { cmd = "cfonts 'tidy' && run-clang-tidy -p build/ -quiet -use-color", depends_on = [ "base" ] } # after build
 all = { cmd = "pwd", depends_on = [
             "install",
@@ -27,6 +28,7 @@ all = { cmd = "pwd", depends_on = [
             "base",
             "clang-tidy",
             # "perf",
+            "gtest",
             "asan-mem",
             "asan-thread",
             "valgrind",
@@ -51,3 +53,4 @@ gcovr = "5.2.*"
 gprof2dot = "2019.11.30.*"
 linux-perf = "6.3.10.*"
 valgrind = "3.22.0.*"
+gtest = "1.14.0.*"

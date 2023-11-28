@@ -30,7 +30,7 @@
 
 ## unit test
 
-1. 🔲 gtest
+1. ✅ gtest
 
 ## coverage test
 
