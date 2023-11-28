@@ -17,6 +17,10 @@ jobs:
       uses: test-summary/action@v2
       with:
         paths: "build/test/*.xml"
+    - name: test report
+      uses: dorny/test-reporter@v1
+      with:
+        paths: "build/test/*.xml"
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
