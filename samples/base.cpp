@@ -7,7 +7,7 @@
 #include <chrono>  // NOLINT [build/c++11]
 #include <iostream>
 #include <random>
-#include <thread>  // NOLINT [build/c++11]
+// #include <thread>  // NOLINT [build/c++11]
 
 #include "./add.hpp"
 
@@ -23,19 +23,19 @@ using Clock = std::chrono::steady_clock;
                    .count()                                           \
             << "us";
 
-int Global;
-void *thread1(void *x) {
-  Global = 42;
-  return x;
-}
+// int Global;
+// void *thread1(void *x) {
+//   Global = 42;
+//   return x;
+// }
 
-int threadTest() {
-  pthread_t t;
-  pthread_create(&t, nullptr, thread1, nullptr);
-  Global = 43;
-  pthread_join(t, nullptr);
-  return Global;
-}
+// int threadTest() {
+//   pthread_t t;
+//   pthread_create(&t, nullptr, thread1, nullptr);
+//   Global = 43;
+//   pthread_join(t, nullptr);
+//   return Global;
+// }
 
 static float generateRandomFloat(float min, float max) {
   std::random_device rd;
@@ -44,18 +44,31 @@ static float generateRandomFloat(float min, float max) {
   return dist(gen);
 }
 
+int fib(int x) {
+  int result = 0;
+  if (x == 0)
+    result = 0;
+  else if (x == 1)
+    result = 1;
+  else
+    result = fib(x - 1) + fib(x - 2);
+  return result;
+}
+
 int main() {
+  std::cout << "fib 35: " << fib(35) << std::endl;
+
   int a = 1;
   // int *b = new int();  // for memory check
   // *b = 1;
 
   std::cout << "a:" << a << std::endl;
-  int sum = 0;
+  size_t sum = 0;
 
-  for (auto i = 1u; i < 100000; ++i) {
-    sum += add(generateRandomFloat(1000.0, 10000.0),
-               generateRandomFloat(1000.0, 10000.0));
-    // std::cout << j << std::endl;
+  auto tmp = generateRandomFloat(1000.0, 10000.0);
+
+  for (auto i = 1u; i < 1000000; ++i) {
+    sum += add(i, tmp);
   }
   std::cout << sum << std::endl;
 
