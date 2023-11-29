@@ -35,4 +35,4 @@ jobs:
         path: |
           gcovr
           build/test/report.xml
-          html
+          doc_html
