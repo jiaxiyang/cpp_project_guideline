@@ -88,6 +88,8 @@ pixi run all
 
 ## reference
 
+1. [together c & c++ discord](https://discord.gg/tccpp)
+1. [better c++ discord](https://discord.gg/JAEgDRbxtq)
 1. [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
 
 ## TODO
