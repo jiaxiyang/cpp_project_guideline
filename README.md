@@ -22,13 +22,13 @@ pixi run all
 
 ## build system generator
 
-1. ✅ cmake
+1. ✅ [cmake](https://cmake.org)
 2. ✅ using compile options `-Wall -Wextra -Werror`
 
 ## package management
 
 1. ✅ [pixi](https://github.com/prefix-dev/pixi)
-2. ✅ cfonts make task log more readble
+2. ✅ make log more readble [cfonts](https://github.com/dominikwilkowski/cfonts)
 
 ## commit guidelines
 
@@ -50,14 +50,14 @@ pixi run all
 
 ## DCA(Dynamic Code Analysis)
 
-1. ✅ asan
+1. ✅ [asan](https://github.com/google/sanitizers)
    - memcheck
    - thread
-2. ✅ valgrind
+2. ✅ [valgrind](https://valgrind.org/)
 
 ## unit test
 
-1. ✅ gtest
+1. ✅ [gtest](https://github.com/google/googletest)
 
 ## coverage test
 
@@ -65,7 +65,7 @@ pixi run all
 
 ## profiling
 
-1. ✅ perf stat
+1. ✅ [perf](https://perf.wiki.kernel.org)
 2. ✅ [flamegraph](https://github.com/brendangregg/FlameGraph)
 3. ✅ [gprof2dot](https://github.com/jrfonseca/gprof2dot)
 
