@@ -1,6 +1,18 @@
+## overview
+
+This project aims to simplify and guide the way beginners make their cpp projects.
+
 ## basic workflow
 
 ![workflow](https://i.ibb.co/rmKQY1t/9-Hjk-F96-Ry-D.png)
+
+## run this project
+
+```shell
+git clone https://github.com/jiaxiyang/cpp_project_guideline.git
+cd cpp_project_guideline
+pixi run all
+```
 
 ## project layout
 
@@ -27,6 +39,8 @@
 1. [first-contributions](https://github.com/firstcontributions/first-contributions)
 
 ## code review
+
+1. [awesome-code-review](https://github.com/joho/awesome-code-review)
 
 ## SCA(Static Code Analysis)
 
@@ -69,7 +83,7 @@
 
 ## CI/CD
 
-1. Integrate parts
+1. integrate the parts above
 1. 🔲 release artifacts to github
 
 ## reference
