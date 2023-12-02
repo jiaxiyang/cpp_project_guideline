@@ -1,6 +1,6 @@
 ## overview
 
-This project aims to simplify and guide the way beginners make their cpp projects.
+This project aims to guide the way beginners make their cpp projects.
 
 ## basic workflow
 
