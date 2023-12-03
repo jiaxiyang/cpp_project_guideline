@@ -1,3 +1,4 @@
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jiaxiyang/cpp_project_guideline/blob/main/LICENSE)
 [![CI](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml/badge.svg)](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml)
 
 ## overview
