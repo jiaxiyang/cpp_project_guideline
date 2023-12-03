@@ -1,5 +1,7 @@
+[![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jiaxiyang/cpp_project_guideline/blob/main/LICENSE)
 [![CI](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml/badge.svg)](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jiaxiyang/cpp_project_guideline.svg)](http://isitmaintained.com/project/jiaxiyang/cpp_project_guideline "Percentage of issues still open")
 
 ## overview
 
