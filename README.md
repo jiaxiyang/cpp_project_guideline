@@ -1,3 +1,5 @@
+[![Build](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml/badge.svg)](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml)
+
 ## overview
 
 This project aims to guide the way beginners make their cpp projects.
@@ -70,6 +72,8 @@ pixi run all
 
    ![coverage test result](https://i.ibb.co/YjzcYgk/FFEUy1-HVR2.png)
 
+1. 🔲 upload result to [coveralls](https://coveralls.io/) or [codecov](https://about.codecov.io/)
+
 ## profiling
 
 1. ✅ [perf](https://perf.wiki.kernel.org)
@@ -92,7 +96,7 @@ pixi run all
 
 ## CI/CD
 
-1. integrate the parts above
+1. integrate the parts above using github actions
 1. 🔲 release artifacts to github
 
 ## reference
