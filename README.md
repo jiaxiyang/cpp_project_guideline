@@ -1,4 +1,4 @@
-[![Build](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml/badge.svg)](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml)
+[![CI](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml/badge.svg)](https://github.com/jiaxiyang/cpp_project_guideline/actions/workflows/build.yml)
 
 ## overview
 
